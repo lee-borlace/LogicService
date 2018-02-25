@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace LogicService.Model
 {
-    public class Class1
+    public class VariableSubstitution
     {
+        public string Variable { get; set; }
+        public string TextValue { get; set; }
     }
 }

@@ -18,6 +18,10 @@ namespace PrologTest
         [STAThread]
         public static void Main(string[] args)
         {
+            HelloWorld();
+
+            return;
+
             while (true)
             {
                 Console.WriteLine("Options:");
@@ -85,19 +89,21 @@ namespace PrologTest
             }
         }
 
+
+
         public static void HelloWorld()
         {
-            //CodeSentence codeSentence;
+            CodeSentence codeSentence;
 
-            //codeSentence = Parser.Parse("hello(world)")[0];
-            //Program program = new Program();
-            //program.Add(codeSentence);
+            codeSentence = Prolog.Parser.Parse("hello(world)")[0];
+            Program program = new Program();
+            program.Add(codeSentence);
 
-            //codeSentence = Parser.Parse(":-hello(X)")[0];
-            //Query query = new Query(codeSentence);
+            codeSentence = Prolog.Parser.Parse(":-hello(X)")[0];
+            Query query = new Query(codeSentence);
 
-            //PrologMachine machine = PrologMachine.Create(program, query);
-            //ExecutionResults results = machine.RunToSuccess();
+            PrologMachine machine = PrologMachine.Create(program, query);
+            ExecutionResults results = machine.RunToSuccess();
         }
 
         public static void DisplayGrammar()

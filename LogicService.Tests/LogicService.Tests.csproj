@@ -50,8 +50,18 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="PrologNetLogicServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogicService.Model\LogicService.Model.csproj">
+      <Project>{aa785181-9fc6-4ae4-937a-59f7f2ee7899}</Project>
+      <Name>LogicService.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicService.Service\LogicService.Service.csproj">
+      <Project>{151e547c-6537-418b-8540-a542ccec7681}</Project>
+      <Name>LogicService.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -41,8 +41,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ILogicService.cs" />
-    <Compile Include="LogicService.cs" />
+    <Compile Include="PrologNetLogicService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogicService.Model\LogicService.Model.csproj">
+      <Project>{AA785181-9FC6-4AE4-937A-59F7F2EE7899}</Project>
+      <Name>LogicService.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Prolog.NET\sourceCode\Prolog\Prolog\Prolog.csproj">
+      <Project>{171a6b22-168c-4662-8706-131c098622bd}</Project>
+      <Name>Prolog</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
