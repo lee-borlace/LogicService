@@ -1,0 +1,30 @@
+[
+  {
+    "Id": 3992,
+    "Title": "Trace | Clear menu option not enabled properly"
+  },
+  {
+    "Id": 4000,
+    "Title": "Support period as statement terminator"
+  },
+  {
+    "Id": 4181,
+    "Title": "\"Platform not supported\" error"
+  },
+  {
+    "Id": 5626,
+    "Title": "PrologScheduler's samples folder path"
+  },
+  {
+    "Id": 6594,
+    "Title": "Parsing failure"
+  },
+  {
+    "Id": 7534,
+    "Title": "Porting algorithm from swi prolog to Prolog.net"
+  },
+  {
+    "Id": 7535,
+    "Title": "Error with '"
+  }
+]

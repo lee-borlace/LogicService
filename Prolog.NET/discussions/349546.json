@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "813795",
+    "ThreadId": "349546",
+    "Html": "\r\n<p>I'm just getting started with Prolog.NET, and I'd like to use the DCG module included with SWI prolog.</p>\r\n<p>Does anyone know the best way to go about including modules/libraries in Prolog.NET?</p>\r\n",
+    "PostedDate": "2012-03-21T16:07:54.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

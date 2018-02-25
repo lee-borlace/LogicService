@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": "2010-02-10T22:04:49.213-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Grammar must be enhanced due to ambiguity between the use a the period as a statement terminator and its use as a the list functor (e.g. .(a, nil)).",
+    "LastUpdatedDate": "2013-05-15T22:58:39.847-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "prolog",
+    "ReportedDate": "2010-02-08T21:31:17.513-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Support period as statement terminator",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 0,
+    "Id": 4000
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "Resolved with changeset 39239.",
+      "PostedDate": "2010-02-10T22:04:49.213-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-13T17:42:15.883-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-15T22:58:39.847-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

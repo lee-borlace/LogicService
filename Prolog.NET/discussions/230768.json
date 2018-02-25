@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "506708",
+    "ThreadId": "230768",
+    "Html": "<p>Program is not <span id=\"result_box\" lang=en><span style=\"background-color:#e6ecf9;color:#000000\">interpreted ; operator. This is </span></span><span id=\"result_box\" lang=en><span style=\"color:#000000\">alternative operator in Prolog.<br></span></span></p>",
+    "PostedDate": "2010-10-13T09:12:41.273-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "710588",
+    "ThreadId": "230768",
+    "Html": "<p>; is not supported at this time. &nbsp;Programs which use ; would have to be rewritten. &nbsp;For example:</p>\r\n<p><span style=\"white-space: pre;\"> </span>:- X = 1; X = 2</p>\r\n<p>as</p>\r\n<p><span style=\"white-space: pre;\"> </span>A(X) :- X = 1.</p>\r\n<p><span style=\"white-space: pre;\"> </span>A(X) :- X = 2.</p>\r\n<p><span style=\"white-space: pre;\"> </span>:- A(X).</p>\r\n<p>Handling this will require either dynamically generating rules as shown above and/or modifying the Try/Retry WAM&nbsp;instructions&nbsp;to handle arbitrary instruction stream pointers as branch points, rather than rule functors.</p>",
+    "PostedDate": "2011-12-11T12:28:12.54-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

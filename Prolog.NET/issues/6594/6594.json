@@ -1,0 +1,55 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "hello(x,(1,2,3)).\nhello(y,(1,2,4)).\n \nIt's not recognized as a valid program",
+    "LastUpdatedDate": "2013-02-13T17:42:15.25-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "prolog",
+    "ReportedDate": "2011-05-08T19:12:20.81-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Parsing failure",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 6594
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "If by \"(1,2,3)\" you mean list, I think you should declare it in square brackets: \r\nhello(x,[1,2,3]).\r\nhello(y,[1,2,4]).\r\n\r\nIt works. ",
+      "PostedDate": "2011-05-09T08:20:21.35-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "(1,2,3) means a tuple composed by terms: 1, 2 and 3.\r\nInfact on SWI-Prolog:\r\n\r\nhello(x,(1,2,3)).\r\nhello(y,(1,2,4)).\r\n--------------------------\r\n?- hello(x,W).\r\nW = (1, 2, 3).\r\n\r\n\r\n",
+      "PostedDate": "2011-06-09T21:39:51.92-07:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-13T17:42:15.25-08:00",
+      "Id": -2147483648
+    }
+  ]
+}

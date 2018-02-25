@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "799465",
+    "ThreadId": "344726",
+    "Html": "\r\n<p>Can I use anonymous variables (underscore)?</p>\r\n<p>Something like this:</p>\r\n<pre>member(X,[X|_]).\r\nmember(X,[_|R]) :- member(X,R).</pre>\r\n<pre>Warm regards,</pre>\r\n<pre>Slava.</pre>\r\n",
+    "PostedDate": "2012-02-24T08:52:40.363-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

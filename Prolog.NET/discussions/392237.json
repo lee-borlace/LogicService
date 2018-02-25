@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "901305",
+    "ThreadId": "392237",
+    "Html": "\r\n<p>Hi</p>\r\n<p>Newbie question.</p>\r\n<p>Created four facts:</p>\r\n<p>good(egg).</p>\r\n<p>good(onion).</p>\r\n<p>bad(bacon).</p>\r\n<p>bad(chocolate).</p>\r\n<p>&nbsp;</p>\r\n<p>Then created query:</p>\r\n<p>?- good(X).</p>\r\n<p>&nbsp;</p>\r\n<p>Expected:</p>\r\n<p>X=egg;</p>\r\n<p>X=onion</p>\r\n<p>&nbsp;</p>\r\n<p>Got:</p>\r\n<p>Unrecognized input specified.</p>\r\n<p>&nbsp;</p>\r\n<p>What am I doing wrong?</p>\r\n",
+    "PostedDate": "2012-08-19T09:27:55.117-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "901306",
+    "ThreadId": "392237",
+    "Html": "<p>Sorry, just read the manual: should have used \":\" instead of the standard \"?\" ie</p>\r\n<p>&nbsp;</p>\r\n<p>:- good(X)</p>\r\n<p>rather than:</p>\r\n<p>?- good(X)</p>",
+    "PostedDate": "2012-08-19T09:31:47.577-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "838152",
+    "ThreadId": "356293",
+    "Html": "<p>I'm writing an embedded DSL for Prolog in C#, that will soon have its own CodePlex project. The idead is that you can do things like:</p>\n<p>var p = new Program();</p>\n<p>var _ = p.WildCard;</p>\n<p>var hello = p.Predicate&lt;String&gt;();</p>\n<p>hello[\"world\"] %= _;</p>\n<p>I'm currently using this to generate pure Prolog code, to be run later by the C# interface to the SWI-Prolog implementation. I would like to use this as a front-end for your Prolog machinery, which would be great, since all would stay in .NET. Besides, I  cannot debug into SWI-Prolog.</p>\n<p>I don't need to write code into your project, I just need to write some sort of adapter that can be used with your dll. I would like, however, to have your permission to do it and talk about it in my project page. I will of course respect all your credit,  I will not fork your project or in any other way let people download it from my page, just add a link to this page.</p>\n<p>By the way, it's a great work what you have done.&nbsp;</p>",
+    "PostedDate": "2012-05-18T07:45:49.19-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "452683",
+    "ThreadId": "215244",
+    "Html": "<p>Hi,&nbsp;</p>\r\n<p>Most string manipulation methods seem to fail in the PrologWorkbench. The only one that appears to be working is &quot;contains&quot;. None of the others are predicates so I can see why they don't work. Is this intended&nbsp;behavior? If so how should I work with strings?</p>\r\n<p>&nbsp;</p>\r\n<p>for example the following always fails</p>\r\n<p>:- substring(&quot;abc&quot;,1).</p>\r\n<p>&nbsp;</p>\r\n<p>this one always suceeds</p>\r\n<p>:- length(&quot;abc&quot;).</p>\r\n<p>Thank you</p>",
+    "PostedDate": "2010-06-07T14:14:52.16-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "710583",
+    "ThreadId": "215244",
+    "Html": "<p>This actually is working. &nbsp;\"substring\" is a expression that returns a string, &nbsp;Prolog then attempts to convert that to boolean to determine success or failure. &nbsp;The result in the example above is \"a\" which cannot be converted to a boolean - hence the failure. length(\"abc\") returns 3 which is&nbsp;convertible&nbsp;to a boolean True. &nbsp;On the other hand, the expression length(\"\") returns 0 so it would also fail since 0 converts to a boolean False.</p>\r\n<p>Using the \"is\" operator (or the equivalent \":=\") allows you to evaluate substring or the other string functions. &nbsp;For example:</p>\r\n<p>:- X := substring(\"123\",1)</p>\r\n<p>binds X to \"23\".</p>",
+    "PostedDate": "2011-12-11T12:12:41.37-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

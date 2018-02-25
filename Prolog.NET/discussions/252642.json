@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "592259",
+    "ThreadId": "252642",
+    "Html": "\r\n<p>I've just started to play with Prolog.NET, so this may be obvious, but I don't see a way to do it, so I'll ask...&nbsp; If a query can return multiple results, how are those results obtained?&nbsp; For instance:</p>\r\n<p>hello(world).<br>\r\nhello(bob).</p>\r\n<p>:- hello(X)</p>\r\n<p>should return two matches for X, and it does with GNU Prolog (it initially returns one match, but typing &quot;a&quot; returns the other match).&nbsp; The Prolog.NET Workbench, and this code (modified from the one presented in the documentation):</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Program program = new Program();<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; foreach (CodeSentence cs in Parser.Parse(&quot;hello(world).&nbsp; hello(bob).&quot;))\r\n<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; program.Add(cs);<br>\r\n<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; foreach (CodeSentence cs in Parser.Parse(&quot;:-hello(X)&quot;))<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PrologMachine machine = PrologMachine.Create(program, new Query(cs));<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ExecutionResults results = machine.RunToSuccess();<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (results == ExecutionResults.Success)<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; foreach (PrologVariable v in machine.QueryResults.Variables)<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(v);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>\r\n<p>only return &quot;world&quot; as a result.&nbsp; How does one, ideally programmatically, execute a query such that each possible result is obtained?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks!</p>\r\n<p>Charles</p>\r\n",
+    "PostedDate": "2011-04-05T11:37:46.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "592282",
+    "ThreadId": "252642",
+    "Html": "<p>Ah - never mind.&nbsp; I hadn't realized that I could rerun the machine and it would produce successive results, e.g.:</p>\r\n<p>ExecutionResults results = ExecutionResults.None;<br />PrologMachine machine = PrologMachine.Create(program, new Query(cs));<br /><br />while (results != ExecutionResults.Failure)<br />{<br />&nbsp;&nbsp;&nbsp; results = machine.RunToSuccess();<br />&nbsp;&nbsp;&nbsp; if (results == ExecutionResults.Success)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; foreach (PrologVariable v in machine.QueryResults.Variables)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(v);<br />}</p>\r\n<p>Thanks,</p>\r\n<p>Charles</p>",
+    "PostedDate": "2011-04-05T12:14:36.183-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "592914",
+    "ThreadId": "252642",
+    "Html": "<p>[Sorry for my bad English]</p>\r\n<p>Hello Charles,</p>\r\n<p>As I know, you should use findall predicate for multiple results:</p>\r\n<p>:-findall(X, hello(X),Y).</p>\r\n<p>Result:</p>\r\n<p>Y=[world,bob]</p>\r\n<p>&nbsp;</p>\r\n<p>I hope this helps.</p>\r\n<p>Warm regards,</p>\r\n<p>Slava.</p>",
+    "PostedDate": "2011-04-06T09:44:25.037-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "496596",
+    "ThreadId": "228034",
+    "Html": "<p>[Sorry for my bad English]</p>\r\n<p>I would like to have Russian language support. Is it correct to make simple changes for achieving it? Red - cyrillic symbols have been added for Atoms, Variables, and so on. In the similar way.</p>\r\n<pre>[<span>Terminal</span>(<span>@&quot;[A-Z<span style=\"color:#ff0000\">А-Я</span>][a-z<span style=\"color:#ff0000\">а-я</span>A-Z<span style=\"color:#ff0000\">А-Я</span>0-9_]{0,99}&quot;</span>)]</pre>\r\n<pre>For the first sight, works good.</pre>\r\n<pre>Warm regards,</pre>\r\n<pre>Slava.</pre>\r\n<p>PS: Tnx for the Prolog. I need it.</p>",
+    "PostedDate": "2010-09-21T09:48:34.24-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "710585",
+    "ThreadId": "228034",
+    "Html": "<p>I have just checked in a change to the grammar that uses Unicode character classes for variables and atoms:</p>\r\n<p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre>    [Terminal(<span style=\"color: #a31515;\">@\"[\\p{Lu}][\\p{L}\\p{N}_]{0,99}\"</span>)]\r\n    <span style=\"color: blue;\">internal</span> <span style=\"color: blue;\">sealed</span> <span style=\"color: blue;\">class</span> Variable : PrologTerminal\r\n\r\n</pre>\r\n</div>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre>    [Terminal(<span style=\"color: #a31515;\">@\"[\\p{Ll}][\\p{L}\\p{N}_]{0,99}|\\.(?=\\()\"</span>)]\r\n    <span style=\"color: blue;\">internal</span> <span style=\"color: blue;\">sealed</span> <span style=\"color: blue;\">class</span> Atom : PrologTerminal\r\n\r\n</pre>\r\n</div>\r\n</p>\r\n<p>Let me know if that still doesn't produce the desired results. &nbsp;</p>\r\n<p>PS: You're welcome - sorry for such a late reply!</p>",
+    "PostedDate": "2011-12-11T12:16:15.047-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]
