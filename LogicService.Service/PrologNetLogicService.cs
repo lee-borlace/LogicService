@@ -25,6 +25,13 @@ namespace LogicService.Service
 
         public LogicQueryResult Query(string query)
         {
+            query = query.Trim();
+
+            if(!query.StartsWith(":-"))
+            {
+                query = $":-{query}";
+            }
+
             var prologQuery = new Query(Parser.Parse(query)[0]);
             var machine = PrologMachine.Create(_program, prologQuery);
 
