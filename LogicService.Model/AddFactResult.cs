@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace LogicService.Model
 {
-    /// <summary>
-    /// TODO : Add other members for numbers etc.
-    /// </summary>
-    public class LogicQueryResult
+    public class AddFactResult
     {
         public bool Success { get; set; }
 
-        public IList<VariableSubstitution> VariableSubstitutions { get; set; }
+        public string Message { get; set; }
     }
 }

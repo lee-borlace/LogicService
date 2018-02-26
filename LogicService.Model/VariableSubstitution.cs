@@ -10,5 +10,6 @@ namespace LogicService.Model
     {
         public string Variable { get; set; }
         public string TextValue { get; set; }
+        public string DataType { get; set; }
     }
 }

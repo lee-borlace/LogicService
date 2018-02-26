@@ -9,8 +9,10 @@ namespace LogicService.Service
 {
     public interface ILogicService
     {
-        void AddFact(string fact);
+        AddFactResult AddFact(string fact);
 
-        LogicQueryResult Query(string query);
+        IList<LogicSolution> GetQuerySolutions(string query);
+
+        bool QueryHasSolution(string query);
     }
 }

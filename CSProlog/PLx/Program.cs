@@ -120,8 +120,12 @@ namespace PLx
             Console.WriteLine("Example 1");
             Console.WriteLine();
 
-            e.CreateFact("age(lee,39).", null);
-
+            e.Query = "age(lee,39).";
+            foreach (var s in e.SolutionIterator)
+            {
+                Console.WriteLine("{0}{1}", s, (s.IsLast ? null : ";"));
+            }
+            
             SolutionSet ss = e.GetAllSolutions(null, "age(P,N)");
 
             if (ss.Success)
